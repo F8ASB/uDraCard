@@ -13,5 +13,14 @@ Cette documentation considère que vous l'application GIT est installée.
 Se rendre dans le repertoire /opt/ et telecharger le pack:
 ```
 cd /opt/
-git clone 
+git clone https://github.com/F8ASB/uDraCard.git
 ```
+
+## LANCEMENT LOGICIEL
+
+```
+bash /opt/uDraCard/uDraCard_config.sh
+```
+
+## LE MENU
+
