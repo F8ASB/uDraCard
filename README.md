@@ -24,3 +24,8 @@ bash /opt/uDraCard/uDraCard_config.sh
 
 ## LE MENU
 
+Le menu est en deux parties:
+La première pour entrer les parametres de programmation du SA/DRA818 en repondant à des questions.
+Le deuxième est utiliser pour transférer les parametres dans le DRA/SA818 en liaison série.
+
+![alt tag](http://blog.f8asb.com/wp-content/uploads/2020/11/uDraCard_menu.png?w=500)
