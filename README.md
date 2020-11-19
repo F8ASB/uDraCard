@@ -15,6 +15,8 @@ Se rendre dans le repertoire /opt/ et telecharger le pack:
 cd /opt/
 git clone https://github.com/F8ASB/uDraCard.git
 ```
+## CONFIGURATION DES SWITCHS sur la uDraCard
+Il est necessaire de positionner les switch 2 et 3 en ON.
 
 ## LANCEMENT LOGICIEL
 
