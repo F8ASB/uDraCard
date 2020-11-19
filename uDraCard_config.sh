@@ -1,4 +1,4 @@
-whiptail --title "INFORMATION:" --msgbox "Ce programme permet de programmer la uDraCard, il est necessaire de positionner les switchs 2 et 3 sur ON, à la fin de la programmation le sytème redemarrera                                                                             Team F4ICR/F5SWB/F8ASB" 15 60
+whiptail --title "INFORMATION:" --msgbox "Ce programme permet de programmer la uDraCard, il est necessaire de positionner les switchs 2 et 3 sur ON.                                                                             Team F4ICR/F5SWB/F8ASB" 15 60
 
 while : ; do
 
