@@ -31,3 +31,19 @@ La première pour entrer les parametres de programmation du SA/DRA818 en reponda
 Le deuxième est utiliser pour transférer les parametres dans le DRA/SA818 en liaison série.
 
 ![alt tag](http://blog.f8asb.com/wp-content/uploads/2020/11/uDraCard_menu.png?w=500)
+
+## PROCEDURE
+1- Eteindre le raspberry
+```
+sudo halt
+```
+2- Placer les cavaliers 2 et 3 sur ON
+3- Alimenter les raspberry
+4- Se connecter en SSH sur le Raspberry via putty ou en console.
+5 -bash /opt/uDraCard/uDraCard_config.sh
+6- choisir le menu 1 et repondre aux questions afin d'effectuer le parametrage
+7- choisir le menu 2 pour programmer le SA/DRA818
+8- Eteindre le raspberry ( voir etape 1)
+9- Remettre les switchs 2 et 3 en OFF
+10- Alimenter le Raspberry
+
