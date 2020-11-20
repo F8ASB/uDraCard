@@ -3,7 +3,7 @@ whiptail --title "INFORMATION:" --msgbox "Ce programme permet de programmer la u
 while : ; do
 
 choix=$(whiptail --title "Choisir votre action" --radiolist \
-"Que voulez vous faire?" 15 60 4 \
+"Que voulez vous faire?" 15 50 4 \
 "1" "CONFIGURATION uDraCard " ON \
 "2" "ENVOYER SUR uDraCard " OFF 3>&1 1>&2 2>&3)
 
@@ -34,11 +34,11 @@ fi
 choixctcsstx()
 {
 CTCSSTX=$(whiptail --title "Choisir votre action" --radiolist \
-"Frequence CTCSS en TX?" 50 60 39 \
+"Frequence CTCSS en TX?" 40 32 32 \
 "0000" "PAS DE CTCSS" ON \
 "0001" "67.0Hz" OFF \
 "0002" "71.9Hz" OFF \
-"0003" "74.4.0Hz" OFF \
+"0003" "74.4Hz" OFF \
 "0004" "77.0Hz" OFF \
 "0005" "79.7Hz" OFF \
 "0006" "82.5Hz" OFF \
@@ -47,23 +47,23 @@ CTCSSTX=$(whiptail --title "Choisir votre action" --radiolist \
 "0009" "91.5Hz" OFF \
 "0010" "94.8Hz" OFF \
 "0011" "97.4Hz" OFF \
-"0012" "67.0Hz" OFF \
-"0013" "100.0Hz" OFF \
-"0014" "103.5Hz" OFF \
-"0015" "107.2Hz" OFF \
-"0016" "110.9Hz" OFF \
-"0017" "114.8Hz" OFF \
-"0018" "118.8Hz" OFF \
-"0019" "123.0Hz" OFF \
-"0020" "127.3Hz" OFF \
-"0021" "131.8Hz" OFF \
-"0022" "136.5Hz" OFF \
-"0023" "141.3Hz" OFF \
-"0024" "146.2Hz" OFF \
-"0025" "151.4Hz" OFF \
-"0026" "156.7Hz" OFF \
-"0027" "162.2Hz" OFF \
-"0028" "167.9Hz" OFF \
+"0012" "100.0Hz" OFF \
+"0013" "103.5Hz" OFF \
+"0014" "107.2Hz" OFF \
+"0015" "110.9Hz" OFF \
+"0016" "114.8Hz" OFF \
+"0017" "118.8Hz" OFF \
+"0018" "123.0Hz" OFF \
+"0019" "127.3Hz" OFF \
+"0020" "131.8Hz" OFF \
+"0021" "136.5Hz" OFF \
+"0022" "141.3Hz" OFF \
+"0023" "146.2Hz" OFF \
+"0024" "151.4Hz" OFF \
+"0025" "156.7Hz" OFF \
+"0026" "162.2Hz" OFF \
+"0027" "167.9Hz" OFF \
+"0028" "173.8Hz" OFF \
 "0029" "179.9Hz" OFF \
 "0030" "186.2Hz" OFF \
 "0031" "192.8Hz" OFF \
@@ -106,11 +106,11 @@ fi
 choixctcssrx()
 {
 CTCSSRX=$(whiptail --title "Choisir votre action" --radiolist \
-"Frequence CTCSS en RX?" 50 60 39 \
+"Frequence CTCSS en RX?" 40 32 32 \
 "0000" "PAS DE CTCSS" ON \
 "0001" "67.0Hz" OFF \
 "0002" "71.9Hz" OFF \
-"0003" "74.4.0Hz" OFF \
+"0003" "74.4Hz" OFF \
 "0004" "77.0Hz" OFF \
 "0005" "79.7Hz" OFF \
 "0006" "82.5Hz" OFF \
@@ -119,23 +119,23 @@ CTCSSRX=$(whiptail --title "Choisir votre action" --radiolist \
 "0009" "91.5Hz" OFF \
 "0010" "94.8Hz" OFF \
 "0011" "97.4Hz" OFF \
-"0012" "67.0Hz" OFF \
-"0013" "100.0Hz" OFF \
-"0014" "103.5Hz" OFF \
-"0015" "107.2Hz" OFF \
-"0016" "110.9Hz" OFF \
-"0017" "114.8Hz" OFF \
-"0018" "118.8Hz" OFF \
-"0019" "123.0Hz" OFF \
-"0020" "127.3Hz" OFF \
-"0021" "131.8Hz" OFF \
-"0022" "136.5Hz" OFF \
-"0023" "141.3Hz" OFF \
-"0024" "146.2Hz" OFF \
-"0025" "151.4Hz" OFF \
-"0026" "156.7Hz" OFF \
-"0027" "162.2Hz" OFF \
-"0028" "167.9Hz" OFF \
+"0012" "100.0Hz" OFF \
+"0013" "103.5Hz" OFF \
+"0014" "107.2Hz" OFF \
+"0015" "110.9Hz" OFF \
+"0016" "114.8Hz" OFF \
+"0017" "118.8Hz" OFF \
+"0018" "123.0Hz" OFF \
+"0019" "127.3Hz" OFF \
+"0020" "131.8Hz" OFF \
+"0021" "136.5Hz" OFF \
+"0022" "141.3Hz" OFF \
+"0023" "146.2Hz" OFF \
+"0024" "151.4Hz" OFF \
+"0025" "156.7Hz" OFF \
+"0026" "162.2Hz" OFF \
+"0027" "167.9Hz" OFF \
+"0028" "173.8Hz" OFF \
 "0029" "179.9Hz" OFF \
 "0030" "186.2Hz" OFF \
 "0031" "192.8Hz" OFF \
@@ -161,9 +161,9 @@ choixpas()
 
 {
  SPACE=$(whiptail --title "Choisir le pas:" --radiolist \
-"Votre choix?" 15 60 4 \
-"0" "12.5Khz " ON \
-"1" "25Khz " OFF 3>&1 1>&2 2>&3)
+"Votre choix?" 15 40 6 \
+"0" "12.5Khz " OFF \
+"1" "25Khz " ON 3>&1 1>&2 2>&3)
 exitstatus=$?
 
 if [ $exitstatus = 0 ]; then
@@ -178,9 +178,9 @@ choixhighpass()
 
 {
 HIGHPASS=$(whiptail --title "FILTRE HIGHPASS" --radiolist \
-"Activer le HIGHPASS?" 15 60 4 \
-"0" "OUI " OFF \
-"1" "NON " ON 3>&1 1>&2 2>&3)
+"Activer le HIGHPASS?" 15 40 6 \
+"0" "OUI " ON \
+"1" "NON " OFF 3>&1 1>&2 2>&3)
 exitstatus=$?
 
 if [ $exitstatus = 0 ]; then
@@ -195,9 +195,9 @@ choixlowpass()
 
 {
 LOWPASS=$(whiptail --title "FILTRE LOWPASS" --radiolist \
-"Activer le LOWPASS?" 15 60 4 \
-"0" "OUI " OFF \
-"1" "NON " ON 3>&1 1>&2 2>&3)
+"Activer le LOWPASS?" 15 40 6 \
+"0" "OUI " ON \
+"1" "NON " OFF 3>&1 1>&2 2>&3)
 exitstatus=$?
 
 if [ $exitstatus = 0 ]; then
@@ -228,9 +228,9 @@ SQUELCH=$(whiptail --title "Choisir le niveau de Squelch" --radiolist \
 "Votre choix?" 15 60 9 \
 "0" "niveau 0 " OFF \
 "1" "niveau 1 " OFF \
-"2" "niveau 2 " OFF \
+"2" "niveau 2 " ON \
 "3" "niveau 3 " OFF \
-"4" "niveau 4 " ON \
+"4" "niveau 4 " OFF \
 "5" "niveau 5 " OFF \
 "6" "niveau 6 " OFF \
 "7" "niveau 7 " OFF \
@@ -252,9 +252,9 @@ VOLUME=$(whiptail --title "Choisir le niveau de volume" --radiolist \
 "Votre choix?" 15 60 9 \
 "0" "niveau 0 " OFF \
 "1" "niveau 1 " OFF \
-"2" "niveau 2 " OFF \
+"2" "niveau 2 " ON \
 "3" "niveau 3 " OFF \
-"4" "niveau 4 " ON \
+"4" "niveau 4 " OFF \
 "5" "niveau 5 " OFF \
 "6" "niveau 6 " OFF \
 "7" "niveau 7 " OFF \
