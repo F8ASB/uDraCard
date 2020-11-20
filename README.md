@@ -32,6 +32,8 @@ Le deuxième est utiliser pour transférer les parametres dans le DRA/SA818 en l
 
 ![alt tag](http://blog.f8asb.com/wp-content/uploads/2020/11/uDraCard_menu.png?w=500)
 
+IMPORTANT: Pour se deplacer dans le menu, utiliser les fleches, la barre espace pour selectionner et la touche tabulation pour pour aller dans la partie OK ou annuler.
+
 ## PROCEDURE
 1- Eteindre le raspberry
 ```
