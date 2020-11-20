@@ -320,6 +320,7 @@ choixfreqtx
 ;;
 
 2) 
+pkill spotnik2hmi
 ecrituredra
 ;;
 
