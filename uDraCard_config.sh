@@ -3,7 +3,7 @@ whiptail --title "INFORMATION:" --msgbox "Ce programme permet de programmer la u
 while : ; do
 
 choix=$(whiptail --title "Choisir votre action" --radiolist \
-"Que voulez vous faire?" 15 50 4 \
+"Que voulez vous faire ?" 15 50 4 \
 "1" "CONFIGURATION uDraCard " ON \
 "2" "ENVOYER SUR uDraCard " OFF 3>&1 1>&2 2>&3)
 
@@ -33,8 +33,8 @@ fi
 
 choixctcsstx()
 {
-CTCSSTX=$(whiptail --title "Choisir votre action" --radiolist \
-"Frequence CTCSS en TX?" 40 32 32 \
+CTCSSTX=$(whiptail --title "Choisir votre CTCSS" --radiolist \
+"Frequence CTCSS en TX ?" 40 32 32 \
 "0000" "PAS DE CTCSS" ON \
 "0001" "67.0Hz" OFF \
 "0002" "71.9Hz" OFF \
@@ -105,8 +105,8 @@ fi
 
 choixctcssrx()
 {
-CTCSSRX=$(whiptail --title "Choisir votre action" --radiolist \
-"Frequence CTCSS en RX?" 40 32 32 \
+CTCSSRX=$(whiptail --title "Choisir votre CTCSS" --radiolist \
+"Frequence CTCSS en RX ?" 40 32 32 \
 "0000" "PAS DE CTCSS" ON \
 "0001" "67.0Hz" OFF \
 "0002" "71.9Hz" OFF \
@@ -160,10 +160,10 @@ fi
 choixpas()
 
 {
- SPACE=$(whiptail --title "Choisir le pas:" --radiolist \
-"Votre choix?" 15 40 6 \
-"0" "12.5Khz " OFF \
-"1" "25Khz " ON 3>&1 1>&2 2>&3)
+ SPACE=$(whiptail --title "Modes de Transmission :" --radiolist \
+"Votre choix ?" 15 40 6 \
+"0" "NFM - 12.5Khz " ON \
+"1" "WFM - 25Khz " OFF 3>&1 1>&2 2>&3)
 exitstatus=$?
 
 if [ $exitstatus = 0 ]; then
@@ -177,10 +177,10 @@ fi
 choixhighpass()
 
 {
-HIGHPASS=$(whiptail --title "FILTRE HIGHPASS" --radiolist \
-"Activer le HIGHPASS?" 15 40 6 \
-"0" "OUI " ON \
-"1" "NON " OFF 3>&1 1>&2 2>&3)
+HIGHPASS=$(whiptail --title "Audio TX - Activation des aigus" --radiolist \
+"Activer le HIGHPASS ?" 15 40 6 \
+"0" "OUI " OFF \
+"1" "NON " ON 3>&1 1>&2 2>&3)
 exitstatus=$?
 
 if [ $exitstatus = 0 ]; then
@@ -194,10 +194,10 @@ fi
 choixlowpass()
 
 {
-LOWPASS=$(whiptail --title "FILTRE LOWPASS" --radiolist \
-"Activer le LOWPASS?" 15 40 6 \
-"0" "OUI " ON \
-"1" "NON " OFF 3>&1 1>&2 2>&3)
+LOWPASS=$(whiptail --title "Audio TX - Activation des graves" --radiolist \
+"Activer le LOWPASS ?" 15 40 6 \
+"0" "OUI " OFF \
+"1" "NON " ON 3>&1 1>&2 2>&3)
 exitstatus=$?
 
 if [ $exitstatus = 0 ]; then
@@ -210,7 +210,7 @@ fi
 
 choixpreamp()
 {
-if (whiptail --title "Reglage du De/preaccentiuation" --yesno "Voulez vous rester en deaccentation? (oui par defaut)" 8 78); then
+if (whiptail --title "Amplification des aigus" --yesno "Voulez vous conserver l'amplification des aigus (Oui par defaut)" 8 78); then
 
     PREAMP=1
     choixsquelch
@@ -225,7 +225,7 @@ choixsquelch()
 {
 
 SQUELCH=$(whiptail --title "Choisir le niveau de Squelch" --radiolist \
-"Votre choix?" 15 60 9 \
+"Votre choix ?" 15 60 9 \
 "0" "niveau 0 " OFF \
 "1" "niveau 1 " OFF \
 "2" "niveau 2 " ON \
@@ -249,7 +249,7 @@ choixvolume()
 {
 
 VOLUME=$(whiptail --title "Choisir le niveau de volume" --radiolist \
-"Votre choix?" 15 60 9 \
+"Votre choix ?" 15 60 9 \
 "0" "niveau 0 " OFF \
 "1" "niveau 1 " OFF \
 "2" "niveau 2 " ON \
