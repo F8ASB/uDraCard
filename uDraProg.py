@@ -28,7 +28,11 @@ def connect():
 	output = ser.readline()
 	print('Opening port: ' + ser.name)
 	print('\r\nConnection...')
-	print('reponse (0=OK) (1=KO): ' + output.decode("utf-8"))
+	if output.decode("utf-8")!="":
+		print('reponse (0=OK): ' + output.decode("utf-8"))
+	else:
+		print('\x1b[7;37;41m'+"VERIFIER LA CONNEXION AVEC LE DRA/SA818! ( switch 2 et 3 en ON)"+'\x1b[0m')
+		exit()
 
 #DEFINITON DES FONCTIONS
 def volume():
@@ -36,6 +40,13 @@ def volume():
 	ser.write(volume.encode())
 	output = ser.readline()
 	print('Reponse (0=OK) (1=KO) : ' + output.decode("utf-8"))
+	
+	if output.decode("utf-8")!="":
+		print('reponse (0=OK): ' + output.decode("utf-8"))
+	else:
+		print('\x1b[7;37;41m'+"VERIFIER LA CONNEXION AVEC LE DRA/SA818! ( switch 2 et 3 en ON)"+'\x1b[0m')
+		exit()
+
 	print('Le volume est maintenant a : ' +str(s.volumelevel))
 	print("-+-+-+-+-+-+-+-+-+-+-+-+-+-")
 
@@ -45,6 +56,13 @@ def filters():
 	output = ser.readline()
 	print('Envoi commande filtres vers le DRA ;) ')
 	print('Reponse du DRA (0=OK) (1=KO) : ' + output.decode("utf-8"))
+	
+	if output.decode("utf-8")!="":
+		print('reponse (0=OK): ' + output.decode("utf-8"))
+	else:
+		print('\x1b[7;37;41m'+"VERIFIER LA CONNEXION AVEC LE DRA/SA818! ( switch 2 et 3 en ON)"+'\x1b[0m')
+		exit()
+
 	print('Reglage des filtres DRA en cours...')
 	print('                                      pre/dehamphasis          highpass          lowpass')
 	print('Les filtres sont maintenant a :       ' +str(s.filterpre)+'                        ' +str(s.highpass)+'             ' +str(s.lowpass))
