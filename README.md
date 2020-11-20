@@ -8,7 +8,7 @@ Pour plus d'informations sur la carte uDraCard se rendre sur la page dedié : <h
 ## INSTALLATION LOGICIEL
 
 
-Cette documentation considère que vous l'application GIT est installée.
+Cette documentation considère que vous avez l'application GIT installée.
 
 Se rendre dans le repertoire /opt/ et telecharger le pack:
 ```
