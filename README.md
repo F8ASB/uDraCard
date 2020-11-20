@@ -9,6 +9,7 @@ Pour plus d'informations sur la carte uDraCard se rendre sur la page dedié : <h
 
 
 Cette documentation considère que vous avez l'application GIT installée.
+
 <https://git-scm.com/book/fr/v2/Démarrage-rapide-Installation-de-Git>
 
 Se rendre dans le repertoire /opt/ et telecharger le pack:
