@@ -6,11 +6,27 @@ import serial
 import re
 import parametres as s
 
+import json
+
+Json="/etc/spotnik/config.json"
+
 
 serport = '/dev/ttyAMA0'
 baud = '9600'
 ser = serial.Serial(serport, baud, timeout=2)
 
+def updatefreq_json():
+
+    #ouverture de donnees JSON
+    with open(Json, 'r') as f:
+        config = json.load(f)
+        config['rx_qrg'] = str(s.rxfreq)
+        config['tx_qrg'] = str(s.txfreq)
+        config['ctcss_fq'] = str(s.txctcss)
+    #ecriture de donnees JSON
+    with open(Json, 'w') as f:
+        json.dump(config, f) 
+        print('ecriture fichier Json')
 
 #CONTROLE SAISIE DES FREQUENCES
 def validate(freq):
@@ -85,12 +101,5 @@ connect()
 volume()
 filters()
 config()
-
-
-
-
-
-
-
-
+updatefreq_json()
 
