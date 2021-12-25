@@ -95,9 +95,16 @@ def config():
 	print('Envoi CTCSS RX: '+str(s.rxctcss))
 	print('Envoi squelch: '+str(s.squelch))
 
+def readversion():
+	config='AT+VERSION\r\n'
+	ser.write(config.encode())
+	output = ser.readline()
+	print (output.decode("utf-8"))
+
 validate(s.txfreq)
 validate(s.rxfreq)
 connect()
+readversion()
 volume()
 filters()
 config()
